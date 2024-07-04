@@ -33,7 +33,8 @@
         "test:units": "jest --testPathPattern=src/__tests__/units --verbose --runInBand --detectOpenHandles",
         "test:integrations": "jest --testPathPattern=src/__tests__/integrations --verbose --runInBand --detectOpenHandles",
         "test:integrations:auth": "jest --testPathPattern=src/__tests__/integrations/authHandler.test.ts --verbose --runInBand --detectOpenHandles",
-        "build": "tsc --build"
+        "build": "tsc --build",
+        "vercel-build": "echo building..."
     },
     "dependencies": {
         "bcrypt": "^5.0.1",

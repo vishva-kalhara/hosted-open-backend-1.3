@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 const envFilePath = (() => {
     switch (process.env.NODE_ENV) {
         case 'production':
-            return '../configs/.env.prod';
+            return '../configs/.env';
         case 'development':
             return '../configs/.env.dev';
         case 'test':
@@ -28,7 +28,7 @@ process.on('uncaughtException', (err) => {
     process.exit(1);
 });
 
-const PORT = process.env.PORT || (3001 as const);
+const PORT = process.env.PORT || (3000 as const);
 
 connectDB().then(() => {
     app.listen(PORT, () => {
